@@ -1,17 +1,17 @@
 from cloudtest.modules.base import Module
 
-
-
 class S3Bucket(Module):
-
-    """ Test S3 Bucket Attributes"""
+    """Test S3 Bucket Attributes"""
 
     def __init__(self, name):
         self.name = name
         super()
 
-    #Status - OK
     def exists(self):
+        """
+        Method: exists
+        Return: boolean based on the existance of a bucket
+        """
         s3 = self.backend.session.resource('s3')
         exists = True
         try:
@@ -22,8 +22,11 @@ class S3Bucket(Module):
                 exists = False
         return(exists)
 
-    #Status - Not Implemented
     def tag_equals(self, key, value):
+        """
+        Method: tag_equals
+        Return: boolean based on the value of a tag of a bucket
+        """
         s3 = self.backend.session.resource('s3')
         exists = False
         try:
@@ -40,8 +43,11 @@ class S3Bucket(Module):
                 exists = False
         return(exists)
 
-        #Status - OK
     def tag_exists(self, key):
+        """
+        Method: tag_exists
+        Return: boolean based on the existance of a tag of a bucket
+        """
         s3 = self.backend.session.resource('s3')
         exists = False
         try:
@@ -58,8 +64,11 @@ class S3Bucket(Module):
                 exists = False
         return(exists)
 
-    #Status - Not Implemented
     def versioning_is_enabled(self):
+        """
+        Method: versioning_is_enabled
+        Return: boolean based on the versioning of a bucket
+        """
         s3 = self.backend.session.resource('s3')
         enabled = False
         try:
@@ -75,14 +84,23 @@ class S3Bucket(Module):
                 enabled = False
         return(enabled)
 
-    #Status - Not Implemented
     def policy_status_equals(self, status):
+        """
+        Method: policy_status_equals
+        Return: boolean based on the policy status of a bucket
+        """
         pass
 
-    #Status - Not Implemented
     def policy_equals(self, policy):
+        """
+        Method: policy_equals
+        Return: boolean based on the policy of a bucket
+        """
         pass
 
-    #Status - Not Implemented
     def location_equals(self, location):
+        """
+        Method: location
+        Return: boolean based on the location of a bucket
+        """
         pass
