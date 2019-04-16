@@ -1,13 +1,5 @@
 from cloudtest.modules.base import Module
 
-# EC2 Attributes:
-# - Owner
-# - Termination Protection
-
-# - Instance ID
-
-
-
 class EC2Instance(Module):
 
     """ Test EC2 Instances """
