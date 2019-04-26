@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='cloudtest',
-    version='0.1',
+    version='0.0',
     author = 'darneymartin',
     author_email = 'darnellrmartin91@gmail.com',
     description = 'Tool that can be used to test AWS cloud infrastructure.',
